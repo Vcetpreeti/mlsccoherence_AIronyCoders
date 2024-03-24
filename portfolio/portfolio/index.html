@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Acount Management Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <div class="dashboard"><!-- Dashboard -->
+      <header>
+        <img src="assets/img/logo.png" alt="InstinctHub Logo" class="logo">
+
+      </header>
+        <section class="navigation"><!-- Navigation -->
+
+            <img src="assets/img/profile.png" alt="InstinctHub Logo" class="logo">
+
+            <div><a href="#"></a>
+              <a href="index.html"></a><span class="material-icons-outlined">dashboard </span>
+                <span class="material-icons-outlined"> trending_up </span>
+                <span class="material-icons-outlined"> people_alt </span>
+                <span class="material-icons-outlined">recommendation</span>
+                <form action="http://127.0.0.1:5501/faq/index.html" method="get" target="_blank">
+                <button  type="submit"  onclick="'window.location.href='http://127.0.0.1:5501/faq/index.html;">Help</button> 
+
+            </div>
+
+            <img src="assets/img/2.jpg" alt="User Image" class="user">
+
+        </section><!-- Navigation End -->
+
+        <section class="main"><!-- Main -->
+            <div class="search"><!-- Search -->
+                <form action="">
+                    <input type="text" name="search" id="searchProject" placeholder="Search Here">
+                    <span class="material-icons-outlined"> search </span>
+                </form>
+
+                <div class="notification">
+                    <span class="material-icons-outlined"> notifications </span>
+                    <span class="material-icons-outlined"> edit </span>
+                </div>
+            </div><!-- Search End -->
+
+            <div class="title">
+                <h1>Priyal Dhuri</h1>
+
+                <label for="projects">Sort By</label>
+                <select name="projects" id="projectFilter">
+                    <option value="">...</option>
+                    <option value="dates">dates</option>
+                    <option value="week">week</option>
+                    <option value="month">month</option>
+                    <option value="year">year</option>
+                </select>
+
+            </div>
+
+            <div class="project_list"><!-- Project List -->
+
+                <div class="project" data-status="finished" title="Record a video"><!-- Project1 -->
+                    <div class="category category_color1"></div>
+                    <h2>record a video</h2>
+                    <p>on how to improve personality</p>
+
+                    <ul class="activity">
+                        <li>7th march</li>
+                        
+                    </ul>
+
+                    <div class="meta">
+                        
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project1 End -->
+
+                <div class="project" data-status="ongoing" title="brand Ideas"><!-- Project2 -->
+                    <div class="category"></div>
+                    <h2>Brand Ideas</h2>
+                    <p>To proffesionalize brands</p>
+
+                    <ul class="activity">
+                        <li>On 1st march</li>
+                    </ul>
+
+                    <div class="meta">
+                       
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project2 End -->
+
+                <div class="project" data-status="mamaearth" title="mamaearth"><!-- Project3 -->
+                    <div class="category category_color3"></div>
+                    <h2>mamaearth</h2>
+                    <p>on 31st march</p>
+
+                    <ul class="activity">
+                        <li>have to shoot a 2mins promo video</li>
+                    </ul>
+
+                    <div class="meta">
+                       
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project3 End -->
+
+                <div class="project" data-status="recent" title="monk-e-entertainment"><!-- Project4 -->
+                    <div class="category category_color4"></div>
+                    <h2>monk-e-entertainment</h2>
+                    <p>Today</p>
+
+                    <ul class="activity">
+                        <li>to record a podcast</li>
+                    </ul>
+
+                    <div class="meta">
+                       
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project4 End -->
+
+                <div class="project" data-status="ongoing" title="Creator's day"><!-- Project5 -->
+                    <div class="category"></div>
+                    <h2>Creator's day</h2>
+                    <p>12th April</p>
+
+                    <ul class="activity">
+                        <li>collaborate with 2 creators atleast</li>
+                    </ul>
+
+                    <div class="meta">
+                       
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project5 End -->
+
+                <div class="project" data-status="stalled" title="Photoshoot"><!-- Project6 -->
+                    <div class="category category_color3"></div>
+                    <h2>Photoshoot</h2>
+                    <p>1 week ago</p>
+
+                    <ul class="activity">
+                        <li>Get the photo ready for magazine</li>
+                    </ul>
+
+                    <div class="meta">
+                       
+                        </div>
+                        <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project6 End -->
+
+            </div><!-- Project List End -->
+
+        </section><!-- Main End -->
+
+        <section class="secondary"><!-- Secondary -->
+            <div class="chart">
+                <h2>Enagement Analytics</h2>
+                <canvas id="myChart" width="400" height="400"></canvas>
+
+             
+            </div>
+
+            <div class="recent_project"><!-- Recent Project -->
+                <div class="listing">
+                    <div class="title">
+                        <div class="category category_color1"></div>
+                        <h2>Analysis</h2>
+                        <p>by &copy; Social rhythms</p>
+                    </div>
+                    
+                
+            </div><!-- Recent Project End -->
+
+        </section><!-- Secondary End -->
+
+    </div><!-- Dashboard End-->
+    
+    <script src="assets/js/script.js" > </script>
+</body>
+</html>
